@@ -52,9 +52,9 @@ public class Num {
                     System.out.println(pars.Roman_num[result - 1]);
                 } else {
                     if ((ptr = res % 10) != 0) {
-                        for (int i = pars.Roman_num[ptr].length() - 1; i != 0; i--)
-                            result_str += pars.Roman_num[ptr].charAt(pars.Roman_num[ptr].length() - 1 - i);
-                    } else {
+                        for (int i = pars.Roman_num[ptr - 1].length(); i != 0; i--)
+                            result_str += pars.Roman_num[ptr - 1].charAt(/*pars.Roman_num[ptr - 1].length() - */i - 1);
+                    }
                         res /= 10;
                         switch (res) {
                             case 1:
@@ -87,7 +87,6 @@ public class Num {
                             case 10:
                                 result_str += "C";
                                 break;
-                        }
                     }
                     for (int i = result_str.length() - 1; i >= 0; i--)
                         System.out.print(result_str.charAt(i));
