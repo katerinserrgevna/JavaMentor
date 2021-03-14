@@ -53,7 +53,7 @@ public class Num {
                 } else {
                     if ((ptr = res % 10) != 0) {
                         for (int i = pars.Roman_num[ptr - 1].length(); i != 0; i--)
-                            result_str += pars.Roman_num[ptr - 1].charAt(/*pars.Roman_num[ptr - 1].length() - */i - 1);
+                            result_str += pars.Roman_num[ptr - 1].charAt(i - 1);
                     }
                         res /= 10;
                         switch (res) {
